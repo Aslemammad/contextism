@@ -73,7 +73,7 @@ When we create store using Contextism, it gives us 3 hooks :<br>
 Contextism has two hooks beside createStore function:
 
 - **useContext**: takes a React context and returns the value
-- **useStore**: takes two React contexts and returns two values of them, the same thing like in above way but with arguments
+- **useStore**: takes two React contexts and returns two values of them, the same thing like in the above way but with two arguments
 
 ```javascript
 // Store.jsx
