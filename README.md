@@ -119,7 +119,7 @@ export function Div() {
 }
 ```
 ## Typescript 🔷
-Context has Typescript support like generics and ... . in **createStore** you can pass two generics too, first one for the state structure and interface, the second one for the dispatch function.
+Contextish has Typescript support like generics and ... . in **createStore** you can pass two generics too, first one for the state structure and interface, the second one for the dispatch function.
 
 ```javascript
 type Action = {type: 'increment'} | {type: 'decrement'}
