@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { createState } from '../dist/index';
+import { createStore } from '../dist/index';
 
-const context = createState('s');
+const context = createStore('s');
 
 const Div = () => {
 	const cont = context.useStateContext();
@@ -11,11 +11,9 @@ const Div = () => {
 		dispatch
 	] = context.useStore();
 
-	useEffect(() => {});
-
 	return (
 		<div className=''>
-			here <div className=''> {state}</div>
+			<div className=''> {state}</div>
 		</div>
 	);
 };

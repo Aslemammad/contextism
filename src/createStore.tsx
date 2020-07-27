@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useContext, useStore } from './hooks';
-const createState = <T, U>(defaultState?: T, defaultDispatch?: U) => {
+const createStore = <T, U>(defaultState?: T, defaultDispatch?: U) => {
 	const stateContext = React.createContext<T | undefined>(defaultState);
 	const dispatchContext = React.createContext<U | undefined>(defaultDispatch);
 	return {
@@ -19,4 +19,4 @@ const createState = <T, U>(defaultState?: T, defaultDispatch?: U) => {
 	};
 };
 
-export default createState;
+export default createStore;
