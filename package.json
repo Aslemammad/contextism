@@ -5,6 +5,7 @@
     "module": "dist/index.es.js",
     "private": false,
     "license": "MIT",
+    "keywords": ["react", "hooks", "context"],
     "author": "M. Bagher Abiat <zorofight94@gmail.com>",
     "files": [
         "dist"
