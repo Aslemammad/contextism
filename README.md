@@ -1,8 +1,8 @@
 <div align="center">
 
-<b>Contexter</b> 🤩 is a new way to use React Context better.
+<b>Contextish</b> 🤩 is a new way to use React Context better.
 
-<br><br><img width="230" height="230" alt="picker" src="https://github.com/Aslemammad/contexter/blob/master/logo.png?raw=true">
+<br><br><img width="230" height="230" alt="picker" src="https://github.com/Aslemammad/contextish/blob/master/logo.png?raw=true">
 <br><br>
 <i>Read  <a title="Team email, team chat, team tasks, one app" href="https://kentcdodds.com/blog/how-to-use-react-context-effectively">this</a> article to become familiar with the idea.</i>
 
@@ -14,20 +14,20 @@
   
 
 ```bash
-npm i contexter
+npm i contextish
 // or 
-yarn add contexter
+yarn add contextish
 ```
 
   
 
 ## Usage ✏️
-We have two ways to use Contexter, Creating store using it or using it's hooks directly:
+We have two ways to use Contextish, Creating store using it or using it's hooks directly:
 ### #1 createStore ✋
 
 ```javascript
 // store.js 
-import { createStore } from 'contexter';
+import { createStore } from 'contextish';
 const context = createStore("default value for state");
 export default context;
 
@@ -59,7 +59,7 @@ const Div = () => {
 }
 
 ```
-When we create store using contexter, it gives us 3 hooks :<br>
+When we create store using Contextish, it gives us 3 hooks :<br>
 
 - **useStateContext**: the state value that we gave it to state prop in Provider component
 - **useDispatchContext**: the setState function or useReducer dispatch that we passed it to dispatch prop
@@ -70,7 +70,7 @@ When we create store using contexter, it gives us 3 hooks :<br>
 
   
 ### #2 default hooks ✋
-Contexter has two hooks beside createStore function:
+Contextish has two hooks beside createStore function:
 
 - **useContext**: takes a React context and returns the value
 - **useStore**: takes two React contexts and returns two values of them, the same thing like in above way but with arguments
@@ -106,7 +106,7 @@ export function App() {
 }
 // Div.jsx
 import { CountStateContext, CountDispatchContext } from './Store';
-import { useContext, useStore} from 'contexter';
+import { useContext, useStore} from 'contextish';
 
 export function Div() {
 	const state = useContext(CountStateContext);
