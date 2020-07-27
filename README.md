@@ -1,6 +1,6 @@
 <div align="center">
 
-<b>Contexter</b> 🤩 is a way to use React Context better.
+<b>Contexter</b> 🤩 is a new way to use React Context better.
 
 <br><br><img width="230" height="230" alt="picker" src="https://github.com/Aslemammad/contexter/blob/master/logo.png?raw=true">
 <br><br>
