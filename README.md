@@ -65,7 +65,7 @@ When we create store using contexter, it gives us 3 hooks :<br>
 - **useDispatchContext**: the setState function or useReducer dispatch that we passed it to dispatch prop
 - **useStore**: returns us an array with two values of the above hooks; `[ useStateContext, useDispatchContext ]`
 
-  ***NOTE***: you should these hooks( methods of createStore function) in child components of *Provider* component.
+  ***NOTE***: you should use these hooks( methods of createStore function) in child components of *Provider* component.
   <br>
 
   
