@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import { createState, useStore } from '../dist/index';
+import { createState } from '../dist/index';
 
 const context = createState('s');
 
