@@ -6,6 +6,7 @@
     "private": false,
     "description": "New way to use React Context",
     "license": "MIT",
+    "repository": { "url": "https://github.com/Aslemammad/contextish" },
     "keywords": ["react", "hooks", "context"],
     "author": "M. Bagher Abiat <zorofight94@gmail.com>",
     "publishConfig": { "registry": "https://npm.pkg.github.com/" },
@@ -13,14 +14,7 @@
         "dist"
     ],
     "types": "dist/index.d.ts",
-    "dependencies": {
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.3.2",
-        "@testing-library/user-event": "^7.1.2",
-        "@types/jest": "^24.0.0",
-        "@types/node": "^12.0.0",
-        "react-scripts": "3.4.1"
-    },
+
     "peerDependencies": {
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
