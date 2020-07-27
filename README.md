@@ -1,44 +1,137 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+<b>Contexter</b> 🤩 is a way to use React Context better.
 
-In the project directory, you can run:
+<br><br><img width="230" height="230" alt="picker" src="https://github.com/Aslemammad/contexter/blob/master/logo.png?raw=true">
+<br><br>
+<i>Read  <a title="Team email, team chat, team tasks, one app" href="https://kentcdodds.com/blog/how-to-use-react-context-effectively">this</a> article to become familiar with the idea.</i>
 
-### `yarn start`
+</div>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Installation 🔥
 
-### `yarn test`
+  
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm i contexter
+// or 
+yarn add contexter
+```
 
-### `yarn build`
+  
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage ✏️
+We have two ways to use Contexter, Creating store using it or using it's hooks directly:
+### #1 createStore ✋
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```javascript
+// store.js 
+import { createStore } from 'contexter';
+const context = createStore("default value for state");
+export default context;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+// App.jsx
+import Div from './Div'
+import { Provider } from './store';
 
-### `yarn eject`
+const App = () => {
+	const [ state, dispatch ] = React.useState("Value for state"); // or useReducer
+	
+	return (
+		<Provider state={state} dispatch={dispatch}>
+				// Components you want to use the state there.
+				<Div />
+		</Provider>
+		)
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+// Div.jsx
+import { useStateContext, useDispatchContext, useStore } from './store';
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+const Div = () => {
+	const state = useStateContext(); // "Value for state"
+	const dispatch = useDispatchContext(); // dispatch function (setState) in App
+	// or better one
+	const [state, dispatch] = useStore();
+	
+	return ...
+}
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+When we create store using contexter, it gives us 3 hooks :<br>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **useStateContext**: the state value that we gave it to state prop in Provider component
+- **useDispatchContext**: the setState function or useReducer dispatch that we passed it to dispatch prop
+- **useStore**: returns us an array with two values of the above hooks; `[ useStateContext, useDispatchContext ]`
 
-## Learn More
+  ***NOTE***: you should these hooks( methods of createStore function) in child components of *Provider* component.
+  <br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  
+### #2 default hooks ✋
+Contexter has two hooks beside createStore function:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **useContext**: takes a React context and returns the value
+- **useStore**: takes two React contexts and returns two values of them, the same thing like in above way but with arguments
+
+```javascript
+// Store.jsx
+export const CountStateContext = React.createContext();
+export const CountDispatchContext = React.createContext();
+function countReducer(state, action) {
+  ...
+}
+
+export function CountProvider({children}) {
+  const [state, dispatch] = React.useReducer(countReducer, {count: 0});
+  return (
+    <CountStateContext.Provider value={state}>
+      <CountDispatchContext.Provider value={dispatch}>
+        {children}
+      </CountDispatchContext.Provider>
+    </CountStateContext.Provider>
+  )
+}
+// App.jsx
+import { CountProvider } from './Store';
+import Div from './Div';
+export function App() {
+	return (
+		<CountProvider>
+			<Div />
+		</CountProvider>
+	)
+
+}
+// Div.jsx
+import { CountStateContext, CountDispatchContext } from './Store';
+import { useContext, useStore} from 'contexter';
+
+export function Div() {
+	const state = useContext(CountStateContext);
+	const dispatch = useContext(CountDispatchContext);
+	// Or much better:
+	const [state, dispatch] = useStore(CountStateContext,CountDispatchContext);
+	
+	return ...
+
+}
+```
+## Typescript 🔷
+Context has Typescript support like generics and ... . in **createStore** you can pass two generics too, first one for the state structure and interface, the second one for the dispatch function.
+
+```javascript
+type Action = {type: 'increment'} | {type: 'decrement'}
+type State = { count: number }
+type Dispatch = (action: Action) => void 
+
+const context = createStore<State, Dispatch>(undefined)
+```
+
+## Contribution 
+I'm developer, not a perfect person, so I make much mistakes, it means that be free to create issues and then PRs.
+<br>
+## Thanks ❤️ 
+
+Special thanks for contributing and using this project.
