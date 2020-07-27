@@ -6,7 +6,7 @@
     "private": false,
     "description": "New way to use React Context",
     "license": "MIT",
-    "repository": { "url": "https://github.com/Aslemammad/contextish" },
+    "repository": { "url": "https://github.com/Aslemammad/contextism" },
     "keywords": ["react", "hooks", "context"],
     "author": "M. Bagher Abiat <zorofight94@gmail.com>",
     "files": [
