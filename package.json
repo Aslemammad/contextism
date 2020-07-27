@@ -1,6 +1,6 @@
 {
     "name": "contextish",
-    "version": "1.0.2",
+    "version": "1.0.0",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "private": false,
@@ -9,7 +9,6 @@
     "repository": { "url": "https://github.com/Aslemammad/contextish" },
     "keywords": ["react", "hooks", "context"],
     "author": "M. Bagher Abiat <zorofight94@gmail.com>",
-    "publishConfig": { "registry": "https://npm.pkg.github.com/" },
     "files": [
         "dist"
     ],
