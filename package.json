@@ -1,9 +1,10 @@
 {
-    "name": "contexter",
+    "name": "contextish",
     "version": "1.0.0",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "private": false,
+    "description": "New way to use React Context",
     "license": "MIT",
     "keywords": ["react", "hooks", "context"],
     "author": "M. Bagher Abiat <zorofight94@gmail.com>",
