@@ -40,8 +40,8 @@ const App = () => {
 	
 	return (
 		<Provider state={state} dispatch={dispatch}>
-				// Components you want to use the state there.
-				<Div />
+			// Components you want to use the state there.
+			<Div />
 		</Provider>
 		)
 }
@@ -99,7 +99,7 @@ import Div from './Div';
 export function App() {
 	return (
 		<CountProvider>
-			<Div />
+		<Div />
 		</CountProvider>
 	)
 
