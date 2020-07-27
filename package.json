@@ -1,39 +1,71 @@
 {
-  "name": "react-use-context-hook",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "contexter",
+    "version": "0.1.0",
+    "main": "dist/index.js",
+    "module": "dist/index.es.js",
+    "private": false,
+    "author": "M. Bagher Abiat <zorofight94@gmail.com>",
+    "files": [
+        "dist"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "types": "dist/index.d.ts",
+    "dependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "@types/jest": "^24.0.0",
+        "@types/node": "^12.0.0",
+        "react-scripts": "3.4.1"
+    },
+    "peerDependencies": {
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.10.5",
+        "@babel/preset-react": "^7.10.4",
+        "@rollup/plugin-commonjs": "^14.0.0",
+        "@types/react": "^16.9.43",
+        "@types/react-dom": "^16.9.8",
+        "babel-core": "^6.26.3",
+        "babel-runtime": "^6.26.0",
+        "concurrently": "^5.2.0",
+        "html-webpack-plugin": "^4.3.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "rollup": "^2.23.0",
+        "rollup-plugin-copy": "^3.3.0",
+        "rollup-plugin-sass": "^1.2.2",
+        "rollup-plugin-terser": "^6.1.0",
+        "rollup-plugin-typescript2": "^0.27.1",
+        "ts-loader": "^8.0.1",
+        "typescript": "^3.7.5",
+        "webpack": "^4.44.0",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "scripts": {
+        "start": "concurrently \" rollup -cw\" \"webpack-dev-server  --hot --mode development \"",
+        "build": "rollup -c"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-react"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
