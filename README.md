@@ -22,7 +22,7 @@ yarn add contextism
   
 
 ## Usage ✏️
-We have two ways to use Contextism, Creating store using it or using it's hooks directly:
+We have two ways to use Contextism, Creating store using it or using its hooks directly:
 ### #1 createStore ✋
 
 ```javascript
