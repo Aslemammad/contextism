@@ -27,7 +27,7 @@ const Counter = () => {
 
 afterEach(cleanup);
 
-describe('SeeMore', () => {
+describe('createStore', () => {
   it('is able to read from the store', () => {
     const value = 1;
     const { getByText } = render(<App initialValue={value} />);
