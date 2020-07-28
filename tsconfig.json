@@ -28,7 +28,8 @@
     ],
     "types": [
       "react-dom",
-      "react"
+      "react",
+      "@types/jest"
     ],
     "skipLibCheck": true,
     "esModuleInterop": true,
