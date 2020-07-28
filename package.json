@@ -6,14 +6,19 @@
     "private": false,
     "description": "New way to use React Context",
     "license": "MIT",
-    "repository": { "url": "https://github.com/Aslemammad/contextism" },
-    "keywords": ["react", "hooks", "context"],
+    "repository": {
+        "url": "https://github.com/Aslemammad/contextism"
+    },
+    "keywords": [
+        "react",
+        "hooks",
+        "context"
+    ],
     "author": "M. Bagher Abiat <zorofight94@gmail.com>",
     "files": [
         "dist"
     ],
     "types": "dist/index.d.ts",
-
     "peerDependencies": {
         "react": "^16.13.1",
         "react-dom": "^16.13.1"
@@ -21,13 +26,17 @@
     "devDependencies": {
         "@babel/cli": "^7.10.5",
         "@babel/preset-react": "^7.10.4",
+        "@babel/runtime": "^7.10.5",
         "@rollup/plugin-commonjs": "^14.0.0",
+        "@testing-library/react": "^10.4.7",
+        "@types/jest": "^26.0.7",
         "@types/react": "^16.9.43",
         "@types/react-dom": "^16.9.8",
         "babel-core": "^6.26.3",
         "babel-runtime": "^6.26.0",
         "concurrently": "^5.2.0",
         "html-webpack-plugin": "^4.3.0",
+        "jest": "^26.1.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "rollup": "^2.23.0",
@@ -35,6 +44,7 @@
         "rollup-plugin-sass": "^1.2.2",
         "rollup-plugin-terser": "^6.1.0",
         "rollup-plugin-typescript2": "^0.27.1",
+        "ts-jest": "^26.1.4",
         "ts-loader": "^8.0.1",
         "typescript": "^3.7.5",
         "webpack": "^4.44.0",
@@ -43,7 +53,8 @@
     },
     "scripts": {
         "start": "concurrently \" rollup -cw\" \"webpack-dev-server  --hot --mode development \"",
-        "build": "rollup -c"
+        "build": "rollup -c",
+        "test": "jest"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -64,5 +75,8 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "dependencies": {
+        "react-test-renderer": "^16.13.1"
     }
 }
