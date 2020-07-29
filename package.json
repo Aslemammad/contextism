@@ -1,6 +1,6 @@
 {
     "name": "contextism",
-    "version": "1.0.2",
+    "version": "1.1.2",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "private": false,
@@ -25,6 +25,7 @@
     },
     "devDependencies": {
         "@babel/cli": "^7.10.5",
+        "@babel/preset-env": "^7.10.4",
         "@babel/preset-react": "^7.10.4",
         "@babel/runtime": "^7.10.5",
         "@rollup/plugin-commonjs": "^14.0.0",
@@ -33,6 +34,7 @@
         "@types/react": "^16.9.43",
         "@types/react-dom": "^16.9.8",
         "babel-core": "^6.26.3",
+        "babel-loader": "^8.1.0",
         "babel-runtime": "^6.26.0",
         "concurrently": "^5.2.0",
         "html-webpack-plugin": "^4.3.0",
@@ -53,7 +55,7 @@
     },
     "scripts": {
         "start": "concurrently \" rollup -cw\" \"webpack-dev-server  --hot --mode development \"",
-        "build": "rollup -c",
+        "build": "rm -rf dist && rollup -c",
         "test": "jest"
     },
     "eslintConfig": {
