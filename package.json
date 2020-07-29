@@ -1,6 +1,6 @@
 {
     "name": "contextism",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "private": false,
@@ -46,7 +46,6 @@
         "rollup-plugin-typescript2": "^0.27.1",
         "ts-jest": "^26.1.4",
         "ts-loader": "^8.0.1",
-        "react-test-renderer": "^16.13.1",
         "typescript": "^3.7.5",
         "webpack": "^4.44.0",
         "webpack-cli": "^3.3.12",
@@ -76,5 +75,5 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    },
+    }
 }
