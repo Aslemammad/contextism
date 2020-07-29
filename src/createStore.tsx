@@ -6,10 +6,18 @@ const createStore = <T, U>(defaultState?: T, defaultDispatch?: U) => {
 	return {
 		stateContext,
 		dispatchContext,
-		useStateContext: useContext.bind(null, stateContext),
-		useDispatchContext: useContext.bind(null, dispatchContext),
-		useStore: useStore.bind(null, stateContext, dispatchContext),
-		Provider: ({ state, dispatch, children }: { state: T; dispatch?: U; children?: React.ReactChildren | React.ReactNode }) => {
+		useStateContext: () => useContext(stateContext),
+		useDispatchContext: () => useContext(dispatchContext),
+		useStore: () => useStore(stateContext, dispatchContext),
+		Provider: ({
+			state,
+			dispatch,
+			children
+		}: {
+			state: T;
+			dispatch?: U;
+			children?: React.ReactChildren | React.ReactNode;
+		}) => {
 			return (
 				<stateContext.Provider value={state}>
 					<dispatchContext.Provider value={dispatch}>{children}</dispatchContext.Provider>
