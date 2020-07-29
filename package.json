@@ -1,6 +1,6 @@
 {
     "name": "contextism",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "private": false,
@@ -12,7 +12,7 @@
     "keywords": [
         "react",
         "hooks",
-        "context"
+        "context", "typescript", "types", "state-management", "hooks-api-react", "reactjs"
     ],
     "author": "M. Bagher Abiat <zorofight94@gmail.com>",
     "files": [
