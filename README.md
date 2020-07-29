@@ -5,9 +5,8 @@
 <br><br><img width="230" height="230" alt="picker" src="https://github.com/Aslemammad/Contextism/blob/master/logo.png?raw=true">
 <br><br>
 <i>Read  <a title="Team email, team chat, team tasks, one app" href="https://kentcdodds.com/blog/how-to-use-react-context-effectively">this</a> article to become familiar with the idea.</i>
-
+![Downloads](https://img.shields.io/npm/dw/contextism) ![Size](https://img.shields.io/bundlephobia/minzip/contextism?label=Min) ![License](https://img.shields.io/npm/l/contextism)
 </div>
-
 
 ## Installation 🔥
 
