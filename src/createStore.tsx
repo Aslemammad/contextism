@@ -14,8 +14,8 @@ const createStore = <T, U>(defaultState?: T, defaultDispatch?: U) => {
 			dispatch,
 			children
 		}: {
-			state: T;
-			dispatch?: U;
+			state: T | undefined;
+			dispatch?: U | undefined;
 			children?: React.ReactChildren | React.ReactNode;
 		}) => {
 			return (
