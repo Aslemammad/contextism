@@ -1,6 +1,6 @@
 {
     "name": "contextism",
-    "version": "1.1.7",
+    "version": "1.1.8",
     "main": "dist/index.js",
     "module": "dist/index.es.js",
     "private": false,
@@ -12,7 +12,12 @@
     "keywords": [
         "react",
         "hooks",
-        "context", "typescript", "types", "state-management", "hooks-api-react", "reactjs"
+        "context",
+        "typescript",
+        "types",
+        "state-management",
+        "hooks-api-react",
+        "reactjs"
     ],
     "author": "M. Bagher Abiat <zorofight94@gmail.com>",
     "files": [
@@ -46,6 +51,7 @@
         "rollup-plugin-typescript2": "^0.27.1",
         "ts-jest": "^26.1.4",
         "ts-loader": "^8.0.1",
+        "ts-node": "^8.10.2",
         "typescript": "^3.7.5",
         "webpack": "^4.44.0",
         "webpack-cli": "^3.3.12",
@@ -75,5 +81,8 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "dependencies": {
+        "remove": "^0.1.5"
     }
 }
