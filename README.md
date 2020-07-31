@@ -29,7 +29,7 @@ We have two ways to use Contextism, Creating store using it or using its hooks d
 import { createStore } from 'contextism';
 const context = createStore("default value for state");
 const { Provider, useDispatchContext, useStateContext } = context;
-export default { Provider, useDispatchContext, useStateContext };
+export { Provider, useDispatchContext, useStateContext };
 
 // App.jsx
 import Div from './Div'
