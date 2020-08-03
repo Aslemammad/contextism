@@ -118,14 +118,16 @@ export function Div() {
 }
 ```
 ## Typescript 🔷
-Contextish has Typescript support like generics and ... . in **createStore** you can pass two generics too, first one for the state structure and interface, the second one for the dispatch function.
+Contextism has Typescript support like generics and ... . in **createStore** you can pass two generics too, first one for the state structure and interface, the second one for the dispatch function.
 
 ```javascript
 type Action = {type: 'increment'} | {type: 'decrement'}
 type State = { count: number }
-type Dispatch = (action: Action) => void 
+// The second generic is for useReducer Action
+const context = createStore<State, Action>();
 
-const context = createStore<State, Dispatch>(undefined)
+// For useState just pass the first generic (State interface generic)
+const context = createStore<State>();
 ```
 
 ## Contribution 
