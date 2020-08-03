@@ -20,8 +20,6 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "declarationDir": "./dist",
     "typeRoots": [
       "./node_modules/@types"
@@ -37,7 +35,7 @@
     "strict": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    // "noEmit": true
   },
   "include": [
     "src"
