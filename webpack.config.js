@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const path = require('path');
 const packageJson = require('./package.json');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+delete process.env.TS_NODE_PROJECT;
 
 // constiables
 const sourcePath = path.join(__dirname, './example');
@@ -13,7 +15,7 @@ module.exports = {
 	context   : sourcePath,
 	mode      : 'development',
 	entry     : {
-		app : './index.js'
+		app : './index.tsx'
 	},
 	output    : {
 		path     : outPath,
@@ -32,6 +34,16 @@ module.exports = {
 			'module',
 			'browser',
 			'main'
+		],
+		plugins    : [
+			new TsconfigPathsPlugin({
+				configFile : path.resolve(__dirname, 'example/tsconfig.json'),
+				extensions : [
+					'.ts',
+					'.tsx',
+					'.js'
+				]
+			})
 		]
 	},
 	module    : {
