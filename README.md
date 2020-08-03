@@ -118,7 +118,7 @@ export function Div() {
 }
 ```
 ## Typescript 🔷
-Contextism has Typescript support like generics and ... . in **createStore** you can pass two generics too, first one for the state structure and interface, the second one for the dispatch function.
+Contextism has Typescript support like generics and ... . in **createStore** you can pass two generics too, first one for the state structure and interface, the second one for the useReducer hook.
 
 ```javascript
 type Action = {type: 'increment'} | {type: 'decrement'}
