@@ -129,6 +129,8 @@ const context = createStore<State, Action>();
 // For useState just pass the first generic (State interface generic)
 const context = createStore<State>();
 ```
+## Donation
+You can support me and my projects with [Open Collecive](https://opencollective.com/contextism).
 
 ## Contribution 
 I'm developer, not a perfect person, so I make much mistakes, it means that be free to create issues and then PRs.
