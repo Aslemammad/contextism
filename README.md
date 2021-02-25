@@ -133,7 +133,7 @@ const context = createStore<State>();
 You can support me and my projects with [Open Collecive](https://opencollective.com/contextism).
 
 ## Contribution 
-I'm developer, not a perfect person, so I make much mistakes, it means that be free to create issues and then PRs.
+I'm developer, not a perfect person, so I make many mistakes, it means that be free to create issues and then PRs.
 <br>
 ## Thanks ❤️ 
 
